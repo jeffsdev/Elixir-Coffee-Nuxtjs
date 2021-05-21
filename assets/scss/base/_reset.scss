@@ -1,6 +1,6 @@
 html {
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%; 
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%; 
 	-moz-tab-size: 4;
 	tab-size: 4;
 }
@@ -52,6 +52,8 @@ q:before, q:after {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+  border: 0;
 }
 
 hr {

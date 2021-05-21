@@ -1,0 +1,49 @@
+body {
+    font: 16px/1.5 $slabstack;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+h1 {font-size: 3em;}
+h2 {font-size: 2.25em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.25em;}
+h5 {font-size: 1.125em;} 
+h6 {font-size: 1em} 
+
+b,
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: $coffee-light;
+    text-decoration: none;
+    @media screen and #{$x-large} {
+        font-size: 1.125em;
+    }  
+}
+
+p {
+    line-height: 1.5;
+    padding: .5em 0;
+    @media screen and #{$x-large} {
+      font-size: 1.125em;
+    }
+}
+
+span {
+    @media screen and #{$x-large} {
+      font-size: 1.125em;
+    }
+}
+
+p,
+span {
+    @media screen and #{$x-large} {
+        font-size: 1.125em;
+    }
+}
