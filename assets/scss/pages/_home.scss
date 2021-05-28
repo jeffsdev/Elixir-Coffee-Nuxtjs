@@ -1,0 +1,163 @@
+// About Section
+.section-about {
+    .about-content {
+      align-items: center;
+    }
+    .about-us {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10%;
+      @media screen and #{$tablet} {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        margin-bottom: 0;
+      }
+      h2 {
+        text-align: center;
+        color: $coffee-dark;
+        @media screen and #{$tablet} {
+          text-align: left;
+        }
+      }
+      h3 {
+        margin: 1em 0 0;
+        text-align: right;
+        color: $alt-blue;
+        @media screen and #{$large} {
+          text-align: center;
+          font-size: 2em;
+        }
+      }
+    }
+    img {
+      @media screen and #{$tablet} {
+        grid-column: 1;
+      }
+    }
+  }
+
+
+  // Locations Section
+  .section-locations {
+    background: $dark-gray url("~/assets/images/stone-bw.jpg") center/cover no-repeat;
+    color: $light-tan;
+  
+    .locations-content {
+      display: flex;
+      flex-direction: column;
+      @media screen and #{$tablet} {
+        flex-direction: row;
+        column-gap: 10%;
+      }
+    }
+  
+    .locations-summary {
+      width: 100%;
+      .locations-img {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0;
+        img {
+          display: block;
+          width: 45%;
+          flex: 0 1 auto;
+          height: 100%;
+        }
+      }
+      @media screen and #{$tablet} {
+        width: 45%;
+      }
+    }
+  
+    .locations-addresses {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 100%;
+      @media screen and #{$lg-mobile} {
+        flex-direction: row;
+        column-gap: 10%;
+      }    
+      @media screen and #{$tablet} {
+        flex-direction: column;
+        width: 45%;
+      }        
+      @media screen and #{$desktop} {
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 0;
+      }           
+      h3 {
+        margin: 0 0 1em;
+        color: $coffee-light;
+      }
+      img {
+        width: 1em;
+        max-height: 1em;
+        margin-right: 1em;
+        object-position: center;
+        opacity: 0.8;
+      }
+      img:nth-of-type(2) {
+        margin: 1rem 10px 1rem 0;
+      }
+    }
+  
+    .location-item {
+      width: auto;
+      margin: 2em 0; 
+      @media screen and #{$lg-mobile} {
+        width: 45%;
+      }    
+      @media screen and #{$tablet} {
+        width: auto;
+      }    
+      div {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+  // Testimonials Section
+.section-testimonial {
+    background: $coffee-brown url("~/assets/images/grinder.jpg") center/cover no-repeat;
+    background-attachment: fixed;
+    .testimonial-content {
+        display: flex;
+        width: 90%;
+        max-width: 1400px;
+        color: $light-tan;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        span:not(.quotesource) {
+            font-size: 5em;
+            font-style: italic;
+            margin-left: -10px;
+            padding-right: 10px;
+            line-height: 1;
+        }
+        .quotesource {
+            display: block;
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+        h4 {
+            font-size: 1.25em;
+            font-weight: normal;
+            line-height: 1.25em;
+            margin: 8px 0;
+        }
+        .quote {
+            padding: 0 1em;
+        }
+    }
+}

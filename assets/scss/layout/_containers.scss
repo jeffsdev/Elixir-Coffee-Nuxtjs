@@ -1,0 +1,48 @@
+body {
+    background: $light-tan;
+    overflow-x: hidden;
+    @media screen and #{$desktop} {
+        font-size: 18px;
+    }          
+    @media screen and #{$large} {
+        font-size: 20px;
+    }        
+    @media screen and #{$x-large} {
+        font-size: 22px;
+    }      
+    @media screen and #{$xx-large} {
+        font-size: 24px;
+    }    
+}
+
+.section--2-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    @media screen and #{$tablet} {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 10%;
+    }      
+}
+
+.page-section {
+    padding: 10% 5%;
+    @media screen and #{$tablet} {
+        padding: 4% 5%;
+    }       
+}
+
+.section-inner {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-full {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}

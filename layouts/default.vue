@@ -17,10 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  background: $light-tan;
-  overflow-x: hidden;
-}
+
 .page-wrapper {
   // darken the rest of the page when mobile nav is open
   &::after {

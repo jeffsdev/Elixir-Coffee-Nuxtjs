@@ -11,6 +11,17 @@ h4 {font-size: 1.25em;}
 h5 {font-size: 1.125em;} 
 h6 {font-size: 1em} 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: .25em;
+}
+
 b,
 strong {
     font-weight: 700;
@@ -22,7 +33,7 @@ a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     color: $coffee-light;
     text-decoration: none;
-    @media screen and #{$x-large} {
+    @media screen and #{$large} {
         font-size: 1.125em;
     }  
 }
@@ -30,20 +41,20 @@ a {
 p {
     line-height: 1.5;
     padding: .5em 0;
-    @media screen and #{$x-large} {
+    @media screen and #{$large} {
       font-size: 1.125em;
     }
 }
 
 span {
-    @media screen and #{$x-large} {
+    @media screen and #{$large} {
       font-size: 1.125em;
     }
 }
 
 p,
 span {
-    @media screen and #{$x-large} {
+    @media screen and #{$large} {
         font-size: 1.125em;
     }
 }
