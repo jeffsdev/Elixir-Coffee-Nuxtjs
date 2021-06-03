@@ -42,6 +42,23 @@
             <span class="closequote">"</span>
           </div>
       </section>
+
+      <!-- Our Team Section  -->
+      <section class="page-section-full section-team">
+        <div class="team-content">
+            <h2>Our Team</h2>
+            <div class="team-members">
+              <div class="team-member" v-for="person in team" :key="person.name" :style="inlineBgImage(person.image)" :aria-label="person.name">
+                <span class="team-member-name">{{person.name}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-message">
+            <div class="container">
+              <p>Pumpkin spice fair trade froth, viennese turkish java decaffeinated extraction breve aftertaste. Coffee, decaffeinated, medium milk frappuccino brewed whipped. Organic, irish flavour, robust id seasonal aftertaste wings!</p>
+            </div>
+          </div>          
+      </section>      
   </main>
 </template>
 
@@ -62,7 +79,41 @@ export default {
           hours: '7am - 4pm',
           phone: '(503) 555-5555'
         }
+      ],
+      team: [
+        {
+          name: 'Ben',
+          image: 'team1.jpg'
+        },
+        {
+          name: 'Sarah',
+          image: 'team2.jpg'
+        },
+        {
+          name: 'Emily',
+          image: 'team3.jpg'
+        },
+        {
+          name: 'Sam',
+          image: 'team4.jpg'
+        },
+        {
+          name: 'Dan',
+          image: 'team5.jpg'
+        },
+        {
+          name: 'Michelle',
+          image: 'team6.jpg'
+        }                                        
       ]
+    }
+  },
+  methods: {
+    inlineBgImage: function(src) {
+      let bgImage = require(`~/assets/images/${src}`);
+      return {
+        backgroundImage: `url("${bgImage}")`
+      }
     }
   }
 }
