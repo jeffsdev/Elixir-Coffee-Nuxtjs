@@ -295,7 +295,7 @@
 
 
 .section-gallery {
-  .gallery-header {
+  &__header {
     padding: 3em 2%;
     background: $dark-gray url("~/assets/images/beans-bw.jpg") center/cover no-repeat;
     background-attachment: fixed;
@@ -310,5 +310,75 @@
         font-size: 1.5em;
       }
     }
+  }
+  &__slider-wrapper {
+    background-color: $coffee-dark;
+    max-height: 500px;
+    min-height: 175px;
+    height: 30vh;
+    overflow: hidden;
+    img {
+      display: block;
+    }
+    @media screen and #{$tablet} {
+      min-height: 350px;
+    }
+    @media screen and #{$x-large} {
+      height: 50vh;
+      max-height: 800px;
+    }
+  }  
+  &__slider {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    div span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      z-index: 0;
+      animation: imageAnimation 30s linear infinite 0s;
+    }
+    div {
+      &:nth-child(1) span {
+        background-position: 0 75%;
+      }
+      &:nth-child(2) span {
+        background-position: 0 75%;
+        animation-delay: 7.5s;
+      }
+      &:nth-child(3) span {
+        animation-delay: 15s;
+      }
+      &:nth-child(4) span {
+        animation-delay: 22.5s;
+      }
+    }
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  15% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

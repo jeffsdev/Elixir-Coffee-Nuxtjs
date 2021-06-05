@@ -1,7 +1,7 @@
 <template>
     <header class="site-header">
-        <Logo />
-        <Nav :open="navToggled" />
+        <BrandLogo />
+        <MainNav :open="navToggled" />
         <NavBurger @click.native="toggleNavMenu" :open="navToggled"/>
     </header>
 </template>

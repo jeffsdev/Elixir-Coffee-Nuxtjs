@@ -1,8 +1,9 @@
 <template>
   <div class="page-wrapper" :class="{ 'nav-menu-open': mobileNavOpen }">
-    <Header v-on:nav-menu-open="mobileNavOpen = !mobileNavOpen" v-on:window-resized="mobileNavOpen = false" />
+    <SiteHeader v-on:nav-menu-open="mobileNavOpen = !mobileNavOpen" v-on:window-resized="mobileNavOpen = false" />
     <MobileNavMenu />
     <Nuxt />
+    <SiteFooter />
   </div>
 </template>
 

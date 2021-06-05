@@ -76,33 +76,17 @@
 
       <!-- Gallery Section -->
       <section class="page-section-full section-gallery">
-        <div class="gallery-header">
+        <div class="section-gallery__header">
           <h3>Steamed dark café au lait aromatic aroma carajillo espresso roast.</h3>
         </div>
-        <div class="gallery-slider height-fix2">
-          <div class='slider'>
-            <!-- images for slider are a css background-image animation  -->
+        <div class="section-gallery__slider-wrapper">
+          <div class='section-gallery__slider'>
             <div v-for="image in galleryImages" :key="image" class="slider-img">
-              <span>{{image}}</span>
+              <span :style="inlineBgImage(image)"></span>
             </div>
-
-            <!-- <div class="slider-img">
-              <span></span>
-            </div>
-            <div class="slider-img">
-              <span></span>
-            </div>
-            <div class="slider-img">
-              <span></span>
-            </div>
-            <div class="slider-img">
-              <span></span>
-            </div> -->
           </div>
         </div>
       </section>      
-
-
   </main>
 </template>
 
