@@ -10,3 +10,18 @@ button {
   background: none;
   cursor: pointer;
 }
+
+.button--default {
+  display: inline-block;
+  background: $coffee-brown;
+  color: $light-tan;
+  padding: .5em 2em;
+  margin: 1em auto;
+  text-align: center;
+  &:hover {
+    background: $coffee-light;
+  }
+  &:active {
+    background: lighten($coffee-light, 20%);
+  }
+}

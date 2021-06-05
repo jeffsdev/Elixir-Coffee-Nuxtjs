@@ -55,10 +55,54 @@
           </div>
           <div class="team-message">
             <div class="container">
-              <p>Pumpkin spice fair trade froth, viennese turkish java decaffeinated extraction breve aftertaste. Coffee, decaffeinated, medium milk frappuccino brewed whipped. Organic, irish flavour, robust id seasonal aftertaste wings!</p>
+              <p>Pumpkin spice fair trade froth, viennese turkish java decaffeinated extraction breve aftertaste. Coffee, decaffeinated, medium milk frappuccino brewed whipped. Organic, irish flavour, robust id seasonal aftertaste!</p>
             </div>
           </div>          
       </section>      
+
+      <!-- Recent Blog Posts Section -->
+      <section class="page-section section-blogposts">
+        <div class="section-inner blogposts-content">
+          <h2>Latest Posts</h2>
+          <p>In barista medium organic black cultivar rich. Crema at ristretto a and that coffee chicory. Body id single origin strong espresso wings black body. Cup americano caramelization plunger pot robusta milk cortado con panna at ristretto.</p>
+
+          <div class="latest-posts">
+            <blog-post v-for="post in posts" :key="post.title" :post="post" />
+          </div>
+
+          <a class="moreposts link-hover-underline" href="">View More Blogposts</a>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="page-section-full section-gallery">
+        <div class="gallery-header">
+          <h3>Steamed dark café au lait aromatic aroma carajillo espresso roast.</h3>
+        </div>
+        <div class="gallery-slider height-fix2">
+          <div class='slider'>
+            <!-- images for slider are a css background-image animation  -->
+            <div v-for="image in galleryImages" :key="image" class="slider-img">
+              <span>{{image}}</span>
+            </div>
+
+            <!-- <div class="slider-img">
+              <span></span>
+            </div>
+            <div class="slider-img">
+              <span></span>
+            </div>
+            <div class="slider-img">
+              <span></span>
+            </div>
+            <div class="slider-img">
+              <span></span>
+            </div> -->
+          </div>
+        </div>
+      </section>      
+
+
   </main>
 </template>
 
@@ -105,6 +149,32 @@ export default {
           name: 'Michelle',
           image: 'team6.jpg'
         }                                        
+      ],
+      posts: [
+        {
+          title: 'Acerbic Percolator',
+          date: 'July 12, 2021',
+          text: 'Robusta cup steamed barista, affogato, viennese, rich robust white skinny pumpkin spice trifecta organic redeye. Barista eu, single shot organic in grinder instant macchiato. Percolator single shot, in grinder extraction, sit breve est.',
+          image: 'blog-img3.jpg'
+        },
+        {
+          title: 'Siphon Crema Espresso',
+          date: 'June 12, 2021',
+          text: 'Café au lait crema, seasonal foam rich americano rich steamed dripper sit viennese. Decaffeinated, mazagran blue mountain, breve cortado carajillo, rich robust white grounds dripper redeye. Cup spice barista caffeine mug bar.',
+          image: 'blog-img2.jpg'
+        },
+        {
+          title: 'Mocha Irish Crema',
+          date: 'May 03, 2021',
+          text: 'Whipped, extraction roast irish, plunger pot chicory eu shop viennese rich. Milk, aromatic sugar, single origin affogato, café au lait espresso, pumpkin spice mocha aromatic eu cinnamon. Kopi-luwak, single shot latte fair trade single breve.',
+          image: 'blog-img1.jpg'
+        },                
+      ],
+      galleryImages: [
+        'pourover.jpg',
+        'coffee-art.jpg',
+        'coffeeshop4.jpg',
+        'beans2.jpg'
       ]
     }
   },

@@ -169,30 +169,35 @@
   background: $light-tan;
   text-align: center;
   h2 {
-    padding: 4% 2%;
+    padding: 1em 2%;
     color: $alt-blue;
     margin-bottom: 0;
   }
   .team-members {
     display: flex;
     flex-wrap: wrap;
-    height: 30vw;
   }
   .team-member { 
     display: flex;
     align-items: flex-end;
-    flex: 1;
     min-width: 5%;
     width: 33.33%;
-    height: 100%;
+    height: 43vw;
     background-position: center;
     background-size: cover;
     transition: 0.6s ease-in-out;
     &:nth-child(5) {
       background-position: 25%;
     }
+    @media screen and #{$desktop} {
+      min-width: 5%;
+      height: 480px;
+      flex: 1;
+      &:hover {
+        flex: 2;
+      }
+    }
     &:hover {
-      flex: 2;
       transition: 0.6s ease-in-out;
       .team-member-name {
         transition: 0.6s ease-in-out;
@@ -221,13 +226,87 @@
   }
   .team-message {
     background: $alt-blue;
-    padding: 25px 2%;
+    padding: 1.5em 2%;
     p {
       font-size: 1.25em;
       color: $light-tan;
-      max-width: 1024px;
+      max-width: 1300px;
       margin: auto;
       @media screen and #{$desktop} {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.section-blogposts {
+  .blogposts-content {
+    display: flex;
+    flex-direction: column;  
+  }
+  .latest-posts {
+    margin-top: 2em;
+    @media screen and #{$desktop} {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+      grid-gap: 5%;
+    }
+  }
+  .blogpost {
+    margin-bottom: 2em;
+    @media screen and #{$sm-tablet} and (max-width: 1023px) {
+      display: flex; 
+      align-items: flex-start;
+    }
+  }
+  img {
+    display: block;
+    margin-bottom: 1em;
+    @media screen and #{$sm-tablet} and (max-width: 1023px) {
+      flex: 1 1 40%;
+      width: 40%;
+      height: auto;
+      margin-right: 5%;
+    }
+  }
+  .post-content {
+    text-align: center;
+    @media screen and #{$sm-tablet} and (max-width: 1023px) {
+      flex: 1 1 55%;
+      width: 55%;
+      height: auto;
+    }    
+  }
+  h3,
+  .blogpost-date,
+  .blogpost-preview {
+    display: block;
+    text-align: left;
+  }
+  .blogpost-date {
+    font-style: italic;
+    color: $coffee-light;
+  }
+  .moreposts {
+    display: inline-block;
+    margin-left: auto;
+  }
+}
+
+
+.section-gallery {
+  .gallery-header {
+    padding: 3em 2%;
+    background: $dark-gray url("~/assets/images/beans-bw.jpg") center/cover no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: $light-tan;
+    @media screen and #{$tablet} {
+      padding: 4em 2%;
+    }
+    h3 {
+      font-size: 1.25em;
+      @media screen and #{$tablet} {
         font-size: 1.5em;
       }
     }
