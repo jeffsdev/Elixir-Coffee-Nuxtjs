@@ -40,7 +40,7 @@
 
   // Locations Section
   .section-locations {
-    background: $dark-gray url("~/assets/images/stone-bw.jpg") center/cover no-repeat;
+    background: $dark-gray center/cover no-repeat;
     color: $light-tan;
   
     .locations-content {
@@ -63,6 +63,7 @@
           width: 45%;
           flex: 0 1 auto;
           height: 100%;
+          aspect-ratio: 12 / 7;
         }
       }
       @media screen and #{$tablet} {
@@ -129,7 +130,7 @@
 
   // Testimonials Section
 .section-testimonial {
-    background: $coffee-brown url("~/assets/images/grinder.jpg") center/cover no-repeat;
+    background: $coffee-brown center/cover no-repeat;
     background-attachment: fixed;
     .testimonial-content {
         display: flex;
@@ -263,6 +264,7 @@
   img {
     display: block;
     margin-bottom: 1em;
+    aspect-ratio: 3 / 2;
     @media screen and #{$sm-tablet} and (max-width: 1023px) {
       flex: 1 1 40%;
       width: 40%;
@@ -297,13 +299,13 @@
 
 .section-gallery {
   &__header {
-    padding: 3em 2%;
-    background: $dark-gray url("~/assets/images/beans-bw.jpg") center/cover no-repeat;
+    padding: 2em 2%;
+    background: $dark-gray center/cover no-repeat;
     background-attachment: fixed;
     text-align: center;
     color: $light-tan;
     @media screen and #{$tablet} {
-      padding: 4em 2%;
+      padding: 2.5em 2%;
     }
     h3 {
       font-size: 1.25em;

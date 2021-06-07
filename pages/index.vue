@@ -15,14 +15,14 @@
       </section>
 
       <!-- Location Section  -->
-      <section class="page-section section-locations">
+      <section class="page-section section-locations lozad" :data-background-image="inlineBgImageLazy('stone-bw.jpg')">
         <div class="section-inner locations-content">
           <div class="locations-summary">
             <h2>Locations</h2>
             <p>Single origin, siphon french press, grounds flavour rich java cup wings decaffeinated plunger pot frappuccino. French press, siphon, frappuccino viennese, that steamed sugar java brewed. Shop macchiato.</p>
             <div class="locations-img">
-              <img src="~/assets/images/coffeeshop2.jpg" alt="coffee shop">
-              <img src="~/assets/images/coffeeshop3.jpg" alt="coffee shop">
+              <img :data-src="require('~/assets/images/coffeeshop2.jpg')" class="lozad" alt="coffee shop">
+              <img :data-src="require('~/assets/images/coffeeshop3.jpg')" class="lozad" alt="coffee shop">
             </div>
           </div>
           <div class="locations-addresses">
@@ -32,7 +32,7 @@
       </section>
 
       <!-- Testimonial Section  -->
-      <section class="page-section section-testimonial">
+      <section class="page-section section-testimonial lozad" :data-background-image="inlineBgImageLazy('grinder.jpg')">
         <div class="section-inner testimonial-content">
             <span class="openquote">"</span>
             <h4 class="quote">French press, sugar rich cappuccino rich, con panna, cup aromatic extra seasonal cultivar. Aroma, single shot kopi-luwak mug, caffeine wings, fair trade brewed!
@@ -48,7 +48,7 @@
         <div class="team-content">
             <h2>Our Team</h2>
             <div class="team-members">
-              <div class="team-member" v-for="person in team" :key="person.name" :style="inlineBgImage(person.image)" :aria-label="person.name">
+              <div class="team-member lozad" v-for="person in team" :key="person.name" :data-background-image="inlineBgImageLazy(person.image)" :aria-label="person.name">
                 <span class="team-member-name">{{person.name}}</span>
               </div>
             </div>
@@ -76,13 +76,13 @@
 
       <!-- Gallery Section -->
       <section class="page-section-full section-gallery">
-        <div class="section-gallery__header">
+        <div class="section-gallery__header lozad" :data-background-image="inlineBgImageLazy('coffee-beans-bw.jpg')">
           <h3>Steamed dark café au lait aromatic aroma carajillo espresso roast.</h3>
         </div>
         <div class="section-gallery__slider-wrapper">
           <div class='section-gallery__slider'>
             <div v-for="image in galleryImages" :key="image" class="slider-img">
-              <span :style="inlineBgImage(image)"></span>
+              <span class="lozad" :data-background-image="inlineBgImageLazy(image)"></span>
             </div>
           </div>
         </div>
@@ -92,6 +92,7 @@
 
 <script>
 import data from '~/static/data.json';
+import lozad from 'lozad';
 
 export default {
   data() {
@@ -108,8 +109,18 @@ export default {
       return {
         backgroundImage: `url("${bgImage}")`
       }
-    }
-  }
+    },
+    inlineBgImageLazy: function(src) {
+      let bgImage = require(`~/assets/images/${src}`);
+      return bgImage;
+    }    
+  },
+  mounted() {
+    const observer = lozad('.lozad', {
+        rootMargin: '100px 0px',
+    });
+    observer.observe();
+  }  
 }
 </script>
 
