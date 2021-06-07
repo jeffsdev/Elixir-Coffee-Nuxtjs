@@ -31,7 +31,7 @@
         </div>
       </section>
 
-      <!-- Location Section  -->
+      <!-- Testimonial Section  -->
       <section class="page-section section-testimonial">
         <div class="section-inner testimonial-content">
             <span class="openquote">"</span>
@@ -91,75 +91,15 @@
 </template>
 
 <script>
+import data from '~/static/data.json';
+
 export default {
   data() {
     return {
-      locations: [
-        {
-          name: 'Burnside',
-          address: '123 E Burnside St',
-          hours: '7am - 4pm',
-          phone: '(503) 444-4444'
-        },
-        {
-          name: 'Mississippi',
-          address: '123 N Mississippi Ave',          
-          hours: '7am - 4pm',
-          phone: '(503) 555-5555'
-        }
-      ],
-      team: [
-        {
-          name: 'Ben',
-          image: 'team1.jpg'
-        },
-        {
-          name: 'Sarah',
-          image: 'team2.jpg'
-        },
-        {
-          name: 'Emily',
-          image: 'team3.jpg'
-        },
-        {
-          name: 'Sam',
-          image: 'team4.jpg'
-        },
-        {
-          name: 'Dan',
-          image: 'team5.jpg'
-        },
-        {
-          name: 'Michelle',
-          image: 'team6.jpg'
-        }                                        
-      ],
-      posts: [
-        {
-          title: 'Acerbic Percolator',
-          date: 'July 12, 2021',
-          text: 'Robusta cup steamed barista, affogato, viennese, rich robust white skinny pumpkin spice trifecta organic redeye. Barista eu, single shot organic in grinder instant macchiato. Percolator single shot, in grinder extraction, sit breve est.',
-          image: 'blog-img3.jpg'
-        },
-        {
-          title: 'Siphon Crema Espresso',
-          date: 'June 12, 2021',
-          text: 'Café au lait crema, seasonal foam rich americano rich steamed dripper sit viennese. Decaffeinated, mazagran blue mountain, breve cortado carajillo, rich robust white grounds dripper redeye. Cup spice barista caffeine mug bar.',
-          image: 'blog-img2.jpg'
-        },
-        {
-          title: 'Mocha Irish Crema',
-          date: 'May 03, 2021',
-          text: 'Whipped, extraction roast irish, plunger pot chicory eu shop viennese rich. Milk, aromatic sugar, single origin affogato, café au lait espresso, pumpkin spice mocha aromatic eu cinnamon. Kopi-luwak, single shot latte fair trade single breve.',
-          image: 'blog-img1.jpg'
-        },                
-      ],
-      galleryImages: [
-        'pourover.jpg',
-        'coffee-art.jpg',
-        'coffeeshop4.jpg',
-        'beans2.jpg'
-      ]
+      locations: data.locations,
+      posts: data.posts,
+      team: data.team,
+      galleryImages: data.galleryImages
     }
   },
   methods: {
