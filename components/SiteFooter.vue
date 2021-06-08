@@ -2,7 +2,7 @@
     <footer class="site-footer">
         <div class="site-footer__top">
             <div class="footer-logo">
-                <img src="~/assets/images/elixir-logo.png" alt="elixir coffee">
+                <img src="~/assets/images/elixir-logo.svg" alt="elixir coffee">
                 <h2>Elixir Coffee</h2>
             </div>
         </div>
