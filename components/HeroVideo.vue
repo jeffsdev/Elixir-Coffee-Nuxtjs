@@ -33,6 +33,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-top: 5em;
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -84,8 +85,8 @@ export default {
       animation: 1s ease-in-out 1s forwards fadeIn;    
     }
     @media screen and #{$tablet} {
-      min-height: 480px;
-      max-height: 30vw;
+      min-height: 540px;
+      max-height: 35vw;
     }
   }
 }
