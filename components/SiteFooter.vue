@@ -16,7 +16,7 @@
             </div>
             <div class="footer-blogposts">
                 <h3>Latest Posts</h3>
-                <p v-for="post in posts" :key="post">
+                <p v-for="(post, key) in posts" :key="key">
                     <a href="#" class="link-hover-underline">{{post.title}}</a>
                     <span> - {{post.date}}</span>
                 </p>
@@ -29,7 +29,7 @@
             </div>
             <div class="footer-locations">
               <h3>Locations</h3>
-              <div v-for="location in locations" :key="location">
+              <div v-for="(location, key) in locations" :key="key">
                   <h4>{{location.name}}</h4>
                   <span class="address">{{location.address}}</span>
                   <br>

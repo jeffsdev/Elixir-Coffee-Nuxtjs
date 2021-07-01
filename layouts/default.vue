@@ -1,6 +1,9 @@
 <template>
-  <div class="page-wrapper" :class="{ 'nav-menu-open': mobileNavOpen }">
-    <SiteHeader v-on:nav-menu-open="mobileNavOpen = !mobileNavOpen" v-on:window-resized="mobileNavOpen = false" />
+  <div class="page-wrapper" :class="{ 'nav-menu-open noscroll': mobileNavOpen }">
+    <SiteHeader 
+      v-on:nav-menu-open="mobileNavOpen = true" 
+      v-on:nav-menu-closed="mobileNavOpen = false" 
+      v-on:window-resized="mobileNavOpen = false" />
     <MobileNavMenu />
     <Nuxt />
     <SiteFooter />
@@ -47,7 +50,12 @@ export default {
         },                
       ]
     }
-  }
+  },
+  watch: {
+      $route () {
+          this.mobileNavOpen = false;
+      }
+  },
 }
 </script>
 
@@ -80,6 +88,11 @@ export default {
       pointer-events: initial; 
       opacity: 0.75;
   }
+}
+
+.noscroll {
+    overflow: hidden;
+    // max-height: 100vh;
 }
 
 </style>

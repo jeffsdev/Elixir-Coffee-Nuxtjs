@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    props: ['open']
+    props: ['open'],
 }
 </script>
 

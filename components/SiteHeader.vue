@@ -17,10 +17,25 @@ export default {
             lastScrollPostion: 0
         }
     },
+    watch: {
+      $route () {
+          this.closeNavMenu();
+      }
+    },
     methods: {
+
         toggleNavMenu() {
-            this.navToggled = !this.navToggled;
-            this.$emit('nav-menu-open', this.navToggled);
+            if (!this.navToggled) {
+                this.navToggled = true;
+                this.$emit('nav-menu-open', this.navToggled);
+            } else {
+                this.navToggled = false;
+                this.$emit('nav-menu-closed', this.navToggled);
+            }
+        },
+        closeNavMenu() {
+            this.navToggled = false;
+            this.$emit('nav-menu-closed', this.navToggled);
         },
         onWindowResize(e) {
             this.navToggled = false;
@@ -45,7 +60,7 @@ export default {
     destroyed() {
         window.removeEventListener("resize", this.onWindowResize);
         window.removeEventListener("scroll", this.onScroll);
-    },    
+    }
 }
 </script>
 
@@ -58,6 +73,7 @@ export default {
     border-bottom: 0.125em solid $coffee-dark;
     padding: 0 0 0 1em;
     width: 100%;
+    max-width: 100vw;
     height: 3.5em;
     transition: .3s;
     z-index: 9;
@@ -70,4 +86,11 @@ export default {
         height: 4.75em;
     }  
 }
+
+.nav-menu-open {
+    .site-header.header-hidden {
+        transform: none;
+    }
+}
+
 </style>

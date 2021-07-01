@@ -1,26 +1,18 @@
 <template>
     <div class="mobile-nav-menu">
-        <NavLinks />
+        <NavLinks/>
     </div>
 </template>
 
 <script>
 export default {
-    // props: ['open'],
-    // data() {
-    //     return {
-    //         mobileNav: true
-    //     }
-    // },
-    // created() {
 
-    // }
 }
 </script>
 
 <style lang="scss">
 .mobile-nav-menu {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -63,8 +55,7 @@ export default {
     }
 }
 
-.nav-menu-open .mobile-nav-menu,
-.mobile-nav-menu:focus-within {
+.nav-menu-open .mobile-nav-menu {
     right: 0;
     transition: all 0.3s ease-in-out;
 }

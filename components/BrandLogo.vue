@@ -1,8 +1,8 @@
 <template>
-  <a href="#elixir-coffee" class="brand-logo">
+  <NuxtLink to="/" class="brand-logo">
     <img src="~/assets/images/elixir-logo.svg" alt="Elixir Coffee">
     <h1>Elixir Coffee</h1>
-  </a>
+  </NuxtLink>
 </template>
 
 <style lang="scss">
