@@ -1,8 +1,8 @@
 <template>
     <div class="nav-links">
-        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/about">About Us</NuxtLink>
         <a href="#locations">Locations</a>
-        <a href="#ourteam">Our Team</a>
+        <a href="#ourteam">Menu</a>
         <a href="#blogposts">Blog</a>
         <a href="#contact">Contact</a>
     </div>

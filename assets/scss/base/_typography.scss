@@ -33,30 +33,11 @@ a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     color: $coffee-light;
     text-decoration: none;
-    @media screen and #{$large} {
-        font-size: 1.125em;
-    }  
 }
 
 p {
     line-height: 1.5;
     padding: .5em 0;
-    @media screen and #{$large} {
-      font-size: 1.125em;
-    }
-}
-
-span {
-    @media screen and #{$large} {
-      font-size: 1.125em;
-    }
-}
-
-p,
-span {
-    @media screen and #{$large} {
-        font-size: 1.125em;
-    }
 }
 
 .link-hover-underline {
@@ -81,3 +62,4 @@ span {
         color: lighten($alt-blue, 20%);
     }
 }    
+

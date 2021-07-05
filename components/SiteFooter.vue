@@ -45,7 +45,7 @@
           </div>
           <div class="footer-column">
             <div class="footer-form">
-              <h3>Contact</h3>
+              <h3>Contact Us</h3>
               <p>Let us know what you think!</p>
               <form id="contact-form">
                 <input type="text" placeholder="Name">

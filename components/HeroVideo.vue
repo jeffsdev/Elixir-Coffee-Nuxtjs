@@ -41,7 +41,7 @@ export default {
         font-size: 1rem;
         line-height: 1;
         @media screen and #{$large} {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
         }
         span {
             display: block;
@@ -65,7 +65,13 @@ export default {
             margin-top: 1em;
             color: $coffee-light;
             font-size: 1.5em;
-            animation-delay: 1.75s;              
+            animation-delay: 1.75s;    
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.65);
+            padding: .5em 2em .4em;
+            line-height: 1;
+            font-weight: 700;
+            border: 2px solid;     
         }
     }
   }
