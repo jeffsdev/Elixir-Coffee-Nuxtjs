@@ -47,12 +47,8 @@
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .hero-container {
-        width: 100%;
-        height: 50vw;
-        min-height: 400px;
-        max-height: 55vh;
         background: url('~/assets/images/about-hero.jpg') center 80%/cover no-repeat;
     }
     

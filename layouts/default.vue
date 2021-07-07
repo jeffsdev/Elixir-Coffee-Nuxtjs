@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import lozad from 'lozad';
+
 export default {
   data() {
     return {
@@ -55,7 +57,7 @@ export default {
       $route () {
           this.mobileNavOpen = false;
       }
-  },
+  },  
 }
 </script>
 
