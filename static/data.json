@@ -64,5 +64,79 @@
       "coffee-art.jpg",
       "coffeeshop4.jpg",
       "beans2.jpg"
-    ]
+    ],
+    "drinks": [
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },   
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Coffee Drink",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      }                         
+    ],
+    "bites": [
+      {
+        "name": "Snack Item",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Snack Item",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },   
+      {
+        "name": "Snack Item",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      },
+      {
+        "name": "Snack Item",
+        "description": "Lorem ipsum dolor amet",
+        "price": "4.50"
+      }                   
+    ]    
   }
