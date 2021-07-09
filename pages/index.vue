@@ -70,7 +70,7 @@
             <blog-post v-for="post in posts" :key="post.title" :post="post" />
           </div>
 
-          <a class="moreposts link-hover-underline" href="">View More Blogposts</a>
+          <NuxtLink to="/blog" class="moreposts link-hover-underline" >View More Blogposts</NuxtLink>
         </div>
       </section>
 

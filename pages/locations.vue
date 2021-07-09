@@ -33,7 +33,7 @@
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .hero-container {
         background: url('~/assets/images/locations-hero.jpg') center 80%/cover no-repeat;
     }

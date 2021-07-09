@@ -5,7 +5,7 @@
             <h3>{{ post.title }}</h3>
             <span class="blogpost-date">{{ post.date }}</span>
             <p class="blogpost-preview">{{ post.text }}</p>
-            <a href="#" class="readmore button--default">Read More</a>
+            <NuxtLink :to="createLinkValue(post.title)" class="readmore button--default" >Read More</NuxtLink>
         </div>
     </div>
 </template>
@@ -18,6 +18,10 @@ export default {
     methods: {
         imgSrcPath: function(image) {
             return require(`~/assets/images/${image}`);
+        },
+        createLinkValue(title) {
+            const t = title.replace(/\s/g , "-");
+            return `/blog/${t.toLowerCase()}`;
         }
     },
     mounted() {

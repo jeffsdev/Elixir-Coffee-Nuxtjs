@@ -1,0 +1,18 @@
+.blog-page-content {
+    .post-content {
+        text-align: center;
+        margin: 1em 0;
+        @media screen and #{$tablet} {
+            text-align: left;
+            margin: 0 0;
+        }        
+    }
+    .blogpost {
+        @media screen and #{$tablet} {
+            display: grid;
+            grid-template-columns: 47% 47%;
+            grid-gap: 6%;
+            margin: 3em 0;
+        }
+    }
+}

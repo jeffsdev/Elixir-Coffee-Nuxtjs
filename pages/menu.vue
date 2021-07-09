@@ -50,7 +50,10 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+    .hero-container {
+        background: url('~/assets/images/menu-hero.jpg') center 80%/cover no-repeat;
+    }
     .menu-intro {
         text-align: center;
     }
