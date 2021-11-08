@@ -41,18 +41,21 @@
     ],
     "posts":[
       {
+        "id": "acerbic-percolator",
         "title":"Acerbic Percolator",
         "date":"June 12, 2021",
         "text":"Robusta cup steamed barista, affogato, viennese, rich robust white skinny pumpkin spice trifecta organic redeye. Barista eu, single shot organic in grinder instant macchiato. Percolator single shot, in grinder extraction, sit breve est.",
         "image":"blog-img3.jpg"
       },
       {
+        "id": "siphon-crema-espresso",
         "title":"Siphon Crema Espresso",
         "date":"May 12, 2021",
         "text":"Café au lait crema, seasonal foam rich americano rich steamed dripper sit viennese. Decaffeinated, mazagran blue mountain, breve cortado carajillo, rich robust white grounds dripper redeye. Cup spice barista caffeine mug bar.",
         "image":"blog-img2.jpg"
       },
       {
+        "id": "mocha-irish-crema",
         "title":"Mocha Irish Crema",
         "date":"April 03, 2021",
         "text":"Whipped, extraction roast irish, plunger pot chicory shop viennese rich. Milk, aromatic sugar, single origin affogato, café au lait espresso, pumpkin spice mocha aromatic cinnamon. Kopi-luwak, single shot latte fair trade single breve.",

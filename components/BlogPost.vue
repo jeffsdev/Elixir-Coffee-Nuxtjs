@@ -5,7 +5,7 @@
             <h3>{{ post.title }}</h3>
             <span class="blogpost-date">{{ post.date }}</span>
             <p class="blogpost-preview">{{ post.text }}</p>
-            <NuxtLink :to="createLinkValue(post.title)" class="readmore button--default" >Read More</NuxtLink>
+            <NuxtLink :to="createLinkValue(post.id)" class="readmore button--default" >Read More</NuxtLink>
         </div>
     </div>
 </template>
@@ -19,9 +19,9 @@ export default {
         imgSrcPath: function(image) {
             return require(`~/assets/images/${image}`);
         },
-        createLinkValue(title) {
-            const t = title.replace(/\s/g , "-");
-            return `/blog/${t.toLowerCase()}`;
+        createLinkValue(id) {
+            // const t = title.replace(/\s/g , "-");
+            return `/blog/${id}`;
         }
     },
     mounted() {
