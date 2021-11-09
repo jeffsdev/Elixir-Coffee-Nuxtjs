@@ -1,12 +1,17 @@
 <template>
-  <main class="page-content-container about-page-content">
-    <div class="hero-container">
+  <main class="page-content-container blog-post-content">
+    <div class="hero-container" :style="{ backgroundImage: `url(${imgSrcPath(post.image)})` }">
         <h1>{{ post.title }}</h1>
     </div>
+    <div class="blog-post__details">
+      <strong>Author:</strong> {{ post.author }}
+      <br>
+      <strong>Date:</strong> {{ post.date }}
+    </div>
     <section class="page-section">
-        <div class="section-inner menu-intro">
-          
-        </div>
+          <div v-html="post.body"></div>
+          <br>
+          <a href="/blog">&lt; Back</a>
     </section>
   </main>
 
@@ -22,6 +27,11 @@ export default {
             posts: data.posts
         }
     },
+    methods: {
+      imgSrcPath: function(image) {
+          return require(`~/assets/images/${image}`);
+      }
+    },
     computed: {
       post() {
         return this.posts.find(p => p.id == this.$route.params.id)
@@ -30,3 +40,17 @@ export default {
 }
 
 </script>
+
+<style lang="scss">
+  .blog-post-content .hero-container {
+    background-size: cover;
+    background-position: center;
+  }
+  .blog-post__details {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 2em;
+    font-size: 1.25em;
+  }
+</style>

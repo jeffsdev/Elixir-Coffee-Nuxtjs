@@ -1,5 +1,5 @@
 <template>
-    <main class="page-content-container about-page-content">
+    <main class="page-content-container menu-page-content">
         <div class="hero-container">
             <h1>Menu</h1>
         </div>

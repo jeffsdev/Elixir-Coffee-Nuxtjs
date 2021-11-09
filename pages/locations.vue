@@ -1,5 +1,5 @@
 <template>
-    <main class="page-content-container about-page-content">
+    <main class="page-content-container locations-page-content">
         <div class="hero-container">
             <h1>Locations</h1>
         </div>
