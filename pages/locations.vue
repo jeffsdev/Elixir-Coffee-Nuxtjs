@@ -75,7 +75,7 @@
     .location-big__content {
         @media screen and #{$desktop} {
             min-height: 350px;
-            height: 50vw;
+            height: 30vw;
             max-height: 90vh;
         }
         p {

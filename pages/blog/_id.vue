@@ -9,9 +9,11 @@
       <strong>Date:</strong> {{ post.date }}
     </div>
     <section class="page-section">
+        <div class="blog-post__post-content">
           <div v-html="post.body"></div>
           <br>
-          <a href="/blog">&lt; Back</a>
+          <a href="/blog" class="link-hover-underline">&lt; Back to Blog Posts</a>
+        </div>
     </section>
   </main>
 
@@ -52,5 +54,11 @@ export default {
     text-align: center;
     padding: 2em;
     font-size: 1.25em;
+  }
+
+  .blog-post__post-content {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
   }
 </style>

@@ -4,7 +4,6 @@
         <NuxtLink to="/locations">Locations</NuxtLink>
         <NuxtLink to="/menu">Menu</NuxtLink>
         <NuxtLink to="/blog">Blog</NuxtLink>
-        <a href="#contact">Contact</a>
     </div>
 </template>
 

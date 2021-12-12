@@ -47,7 +47,7 @@ export default {
             display: block;
             text-align: center;
             opacity: 0;
-            font-weight: 100;
+            font-weight: 400;
             text-shadow: .025em .025em .05em $coffee-black;
             animation: 1s ease-in-out forwards fadeIn;  
         }
