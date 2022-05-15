@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "core-js": "^3.9.1",
+    "core-js": "^3.22.5",
     "lodash": "^4.17.21",
     "lozad": "^1.16.0",
     "nuxt": "^2.15.3"
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "fibers": "^5.0.0",
-    "sass": "^1.32.13",
-    "sass-loader": "^10.2.0"
+    "sass": "^1.51.0",
+    "sass-loader": "^10.2.1"
   }
 }
