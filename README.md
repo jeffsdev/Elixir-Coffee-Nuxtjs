@@ -5,6 +5,7 @@
 ## Description
 ##### This is a simple brochure website that I designed and coded for a fake coffee shop, both as an example project for my developer portfolio and to explore building a static site using Vue and Nuxt.
 
+Visit Website: https://www.elixir-coffee.jeffseymour.me/
 ### Technologies Used
 Vue.js / Nuxt
 
